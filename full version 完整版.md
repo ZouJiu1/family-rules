@@ -1,3 +1,5 @@
+[https://github.com/ZouJiu1/family-rules](https://github.com/ZouJiu1/family-rules)
+
 # 生活规范以及指导---future家规
 
 ## 1 进食和消化
