@@ -1,5 +1,9 @@
 [https://github.com/ZouJiu1/family-rules](https://github.com/ZouJiu1/family-rules)
 
+[https://gitee.com/ZouJiu1/family-rules](https://gitee.com/ZouJiu1/family-rules)
+
+[https://gitcode.com/m0_50617544/family-rules](https://gitcode.com/m0_50617544/family-rules)
+
 # 生活规范以及指导---future家规
 
 本人一己之见仅供参考
