@@ -14,7 +14,7 @@
 
 ## blogs
 
-[zoujiu.com.cn](https://zoujiu.com.cn/homepage#/csdn/markdown_detail/homepage?plan=/home/admin/vue-project/people/homepage/csdn_spider_selenium/article/2025-05-19_%E7%A9%BA%E6%A0%BC_19_00_06_%E7%94%9F%E6%B4%BB%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8A%E6%8C%87%E5%AF%BC%E5%AE%B6%E8%A7%84/2025-08-18_21_50_47_markdown.md)
+[https://zoujiu.com.cn/homepage#/csdn/markdown_detail/homepage?plan=/home/admin/vue-project/people/homepage/csdn_spider_selenium/article/2025-05-19_%E7%A9%BA%E6%A0%BC_19_00_06_%E7%94%9F%E6%B4%BB%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8A%E6%8C%87%E5%AF%BC%E5%AE%B6%E8%A7%84/2025-08-18_21_50_47_markdown.md](https://zoujiu.com.cn/homepage#/csdn/markdown_detail/homepage?plan=/home/admin/vue-project/people/homepage/csdn_spider_selenium/article/2025-05-19_%E7%A9%BA%E6%A0%BC_19_00_06_%E7%94%9F%E6%B4%BB%E8%A7%84%E8%8C%83%E4%BB%A5%E5%8F%8A%E6%8C%87%E5%AF%BC%E5%AE%B6%E8%A7%84/2025-08-18_21_50_47_markdown.md)
 
 [https://gitee.com/ZouJiu1/family-rules](https://gitee.com/ZouJiu1/family-rules)
 
