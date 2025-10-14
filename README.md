@@ -1,6 +1,6 @@
 #  family rules 家规
 
-家规，家庭的规矩，rules of a family
+家规，家庭的规矩，rules of a family 
 
 平时个人思考的日常生活，总结出来的
 
