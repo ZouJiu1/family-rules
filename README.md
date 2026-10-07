@@ -27,3 +27,19 @@
 [https://weibo.com/7725113566/Q331uv4hq?pagetype=profilefeed](https://weibo.com/7725113566/Q331uv4hq?pagetype=profilefeed)
 
 [https://github.com/ZouJiu1/family-rules](https://github.com/ZouJiu1/family-rules)
+
+## To PDF
+<!-- 
+```bash
+sudo apt install pandoc texlive-xetex texlive-lang-chinese
+sudo apt install fonts-noto-cjk fonts-noto-color-emoji
+sudo apt install fonts-noto-cjk
+sudo apt install fonts-symbola
+sudo apt install texlive-luatex texlive-lang-japanese fonts-noto-color-emoji fonts-symbola
+```
+
+>git clone https://github.com/Wandmalfarbe/pandoc-latex-template.git
+>cp -rf pandoc-latex-template/template-multi-file  eisvogel-template
+>cp pandoc-latex-template/template-multi-file/eisvogel.latex pandoc-latex-template/template-multi-file/document-metadata.latex pandoc-latex-template/template-multi-file/eisvogel.beamer /usr/share/pandoc/data/templates -->
+
+`./md2PDF.sh`

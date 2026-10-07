@@ -1,0 +1,14 @@
+% ============================================================
+% header-inc.tex  -  LuaLaTeX 符号/emoji 渲染配置
+% ============================================================
+% 原理: luatexja 默认把符号区(U+2000-27BF 等, range 3)交给 CJK 字体渲染，
+%      而 CJK 字体缺大部分符号字形。
+% 本配置把 range 3 改为拉丁字体处理，配合 mainfontfallback
+%      (NotoColorEmoji:mode=harf + Symbola) 实现:
+%       - 全部 emoji 彩色渲染（U+1F000+ 本就走 alfont + fallback）
+%       - 全部符号自动兜底（☀⚡❌⚠★♠♪■≥... 全量覆盖）
+\ltjsetparameter{jacharrange={-3}}
+
+% 变体选择符 U+FE0F（⚠️ 组合中的修饰符）忽略，避免缺字警告
+\usepackage{newunicodechar}
+\newunicodechar{️}{}
