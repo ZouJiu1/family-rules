@@ -252,6 +252,7 @@ def main() -> int:
     buf.append("> 按题型重新聚合到一张总试卷里，每题保留原始来源标记。")
     buf.append("> 敏感词已用拼音驼峰代替。")
     buf.append("> 题目和答案共用同一套全局编号，例如**第 123 题** ↔ 答案区**123）** 可直接对应。")
+    buf.append("> 完整下载地址：[https://www.alipan.com/s/ZoLNWeqvDcM](https://www.alipan.com/s/ZoLNWeqvDcM) 提取码: **f87y**")
     buf.append("\n---\n")
 
     total = len(all_items)
