@@ -12,7 +12,6 @@ subtitle: "家庭和日常生活指南"
 author: "邹九 http://zoujiu.com.cn"
 date: '\the\year 年\the\month 月\the\day 日'
 lang: zh-CN
-
 # ---------- 文档描述信息 ----------
 # 注意: book: true 时模板使用 KOMA-Script 的 scrbook 文档类，
 # 该类不提供 abstract 环境，填写 abstract 会导致 LaTeX 编译失败，

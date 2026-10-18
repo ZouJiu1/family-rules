@@ -42,4 +42,4 @@ sudo apt install texlive-luatex texlive-lang-japanese fonts-noto-color-emoji fon
 >cp -rf pandoc-latex-template/template-multi-file  eisvogel-template
 >cp pandoc-latex-template/template-multi-file/eisvogel.latex pandoc-latex-template/template-multi-file/document-metadata.latex pandoc-latex-template/template-multi-file/eisvogel.beamer /usr/share/pandoc/data/templates -->
 
-`./md2PDF.sh`
+`./md2PDF.sh`，可以去除水印，自行探索即可

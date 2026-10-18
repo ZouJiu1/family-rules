@@ -16,6 +16,8 @@ OUTPUT_PDF="${INPUT_MD%.md}.pdf"
 OUTPUT_PDF="fullversion生活规范以及指导家规.pdf"
 TEMPLATE_DIR="./eisvogel-template"
 
+find . -maxdepth 10 -name "*.pdf" -print0 | xargs -0 -r rm -f
+
 if [ ! -f "${TEMPLATE_DIR}/eisvogel.latex" ]; then
   echo "❌ 错误: 找不到 ${TEMPLATE_DIR}/eisvogel.latex"
   echo "   请确认 eisvogel-template/ 目录完整"
@@ -31,11 +33,12 @@ fi
 echo "📄 输入: ${INPUT_MD}"
 echo "📄 输出: ${OUTPUT_PDF}"
 echo "🛠  正在用 pandoc + lualatex + Eisvogel 编译..."
-
+#  # --lua-filter=exam-wrap.lua \
 pandoc metadata.yaml "${INPUT_MD}" \
   -o "${OUTPUT_PDF}" \
   --template="${TEMPLATE_DIR}/eisvogel.latex" \
   --pdf-engine=lualatex \
+  --lua-filter=exam-wrap.lua \
   --top-level-division=chapter \
   --toc \
   --toc-depth=3 \
@@ -51,6 +54,31 @@ pandoc metadata.yaml "${INPUT_MD}" \
   --include-in-header=./header-inc.tex \
   -V geometry:margin=1in \
   > md2PDF.log 2>&1
+
+OUTPUT_PDF_WATERMARK="fullversion生活规范以及指导家规-有水印.pdf"
+pandoc metadata.yaml "${INPUT_MD}" \
+  -o "${OUTPUT_PDF_WATERMARK}" \
+  --template="${TEMPLATE_DIR}/eisvogel.latex" \
+  --pdf-engine=lualatex \
+  --lua-filter=exam-wrap.lua \
+  --top-level-division=chapter \
+  --toc \
+  --toc-depth=3 \
+  -V lang=zh-CN \
+  -V mainfont="Noto Sans" \
+  -V mainfontfallback="NotoColorEmoji:mode=harf" \
+  -V monofont="Noto Sans Mono CJK SC" \
+  -V monofontfallback="NotoColorEmoji:mode=harf" \
+  -V CJKmainfont="Noto Sans CJK SC" \
+  -V watermark="邹九1069679911@qq" \
+  -V CJKsansfont="Noto Sans CJK SC" \
+  -V CJKmonofont="Noto Sans CJK SC" \
+  -V mathfont="Noto Sans Math" \
+  --include-in-header=./header-inc.tex \
+  -V geometry:margin=1in \
+  > md2PDF.log 2>&1
+
+./mdaccessment2PDF.sh
 
 if [ -f "${OUTPUT_PDF}" ]; then
   echo "✅ 完成: ${OUTPUT_PDF}"

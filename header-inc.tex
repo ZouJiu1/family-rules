@@ -4,11 +4,52 @@
 % 原理: luatexja 默认把符号区(U+2000-27BF 等, range 3)交给 CJK 字体渲染，
 %      而 CJK 字体缺大部分符号字形。
 % 本配置把 range 3 改为拉丁字体处理，配合 mainfontfallback
-%      (NotoColorEmoji:mode=harf + Symbola) 实现:
-%       - 全部 emoji 彩色渲染（U+1F000+ 本就走 alfont + fallback）
-%       - 全部符号自动兜底（☀⚡❌⚠★♠♪■≥... 全量覆盖）
+%      (NotoColorEmoji:mode=harf + Symbola) 实现符号/彩色 emoji 全量兜底。
+%
+% 当前显式 Symbola 映射覆盖的字符（2026-10-17 从全部试卷扫描得到）：
+%   数学与运算:  √  ×  ÷  ≈  ←  →
+%   度量与温度:  ℃  °  ‰
+%   标记与列表:  ★  ①-⑩  √  ×
+%   标点与破折号: —  …  ·
+%
+% 注: CJK 标点（、 。 《》 【】 （） ！ ？ ， ： ； ＋ － ＝ ～ ＜ ＞）
+%     和全角空格（U+3000）走 Noto Sans CJK SC，无需 newunicodechar 映射。
+% ============================================================
 \ltjsetparameter{jacharrange={-3}}
 
-% 变体选择符 U+FE0F（⚠️ 组合中的修饰符）忽略，避免缺字警告
+% --- 变体选择符 U+FE0F 忽略，避免缺字警告 ---
 \usepackage{newunicodechar}
-\newunicodechar{️}{}
+\usepackage{fontspec}
+\newfontfamily\symbolafont{Symbola}
+
+% --- 数学与运算 ---
+\newunicodechar{√}{\symbolafont √}   % 勾（U+221A）- 判断题答案
+\newunicodechar{×}{\symbolafont ×}   % 叉/乘号（U+00D7）- 判断题答案/数学
+\newunicodechar{÷}{\symbolafont ÷}   % 除号（U+00F7）
+\newunicodechar{≈}{\symbolafont ≈}   % 约等于（U+2248）
+\newunicodechar{←}{\symbolafont ←}   % 左箭头（U+2190）
+\newunicodechar{→}{\symbolafont →}   % 右箭头（U+2192）
+
+% --- 度量与温度 ---
+\newunicodechar{℃}{\symbolafont ℃}   % 摄氏度（U+2103）
+\newunicodechar{°}{\symbolafont °}   % 度数符号（U+00B0）
+\newunicodechar{‰}{\symbolafont ‰}   % 千分比（U+2030）
+
+% --- 标记与列表 ---
+\newunicodechar{★}{\symbolafont ★}   % 难度星级（U+2605）
+\newunicodechar{☆}{\symbolafont ☆}   % 白星（U+2606）
+\newunicodechar{①}{\symbolafont ①}  % 带圈数字 1-10
+\newunicodechar{②}{\symbolafont ②}
+\newunicodechar{③}{\symbolafont ③}
+\newunicodechar{④}{\symbolafont ④}
+\newunicodechar{⑤}{\symbolafont ⑤}
+\newunicodechar{⑥}{\symbolafont ⑥}
+\newunicodechar{⑦}{\symbolafont ⑦}
+\newunicodechar{⑧}{\symbolafont ⑧}
+\newunicodechar{⑨}{\symbolafont ⑨}
+\newunicodechar{⑩}{\symbolafont ⑩}
+
+% --- 标点与破折号（CJK 字体不覆盖，Symbola 兜底） ---
+\newunicodechar{—}{\symbolafont —}   % 破折号（U+2014）
+\newunicodechar{…}{\symbolafont …}   % 省略号（U+2026）
+\newunicodechar{·}{\symbolafont ·}   % 间隔号（U+00B7）
