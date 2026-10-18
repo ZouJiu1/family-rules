@@ -1,0 +1,1 @@
+cd .. && zip -r family-rules.zip  ./family-rules

@@ -1,6 +1,6 @@
 # 生活规范以及指导家规
 
-完整下载地址：[https://www.alipan.com/s/rut3tpweKvF](https://www.alipan.com/s/rut3tpweKvF) 提取码: **sf24**
+完整下载地址：[https://www.alipan.com/s/ZoLNWeqvDcM](https://www.alipan.com/s/ZoLNWeqvDcM) 提取码: **f87y**
 
 作者：邹九，邮箱：1069679911@qq.com
 

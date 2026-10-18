@@ -6,6 +6,9 @@
 
 给以后的孩子看的，大人也可以看.
 
+## 下载
+
+完整下载地址：[https://www.alipan.com/s/ZoLNWeqvDcM](https://www.alipan.com/s/ZoLNWeqvDcM) 提取码: **f87y**
 
 ## 参考书籍
 `《Head First HTML与CSS 第2版》`
